@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.OctoLogo {
+  display: flex;
+  align-items: center;
+}
+
+.OctoLogoText{
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.authButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.login {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+}
+
+.signUp {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+}

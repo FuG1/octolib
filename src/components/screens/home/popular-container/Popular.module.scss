@@ -1,0 +1,15 @@
+@use '../../../../assets/styles/colors' as colors;
+
+.popularContainer{
+  margin: 30px;
+  padding: 0 30px;
+}
+
+.text{
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  word-wrap: break-word;
+  white-space: normal;
+  max-width: 550px;
+}

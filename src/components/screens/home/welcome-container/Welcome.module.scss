@@ -1,0 +1,28 @@
+@use '../../../../assets/styles/colors' as colors;
+
+.welcomeContainer{
+  border-radius: 10px;
+  border: 1px solid colors.$text-color;
+  margin: 30px;
+  padding: 0 30px;
+}
+
+.text{
+    font-family: "Inter", sans-serif;
+    font-size: 60px;
+    font-weight: 500;
+    word-wrap: break-word;
+    white-space: normal;
+    max-width: 550px;
+}
+
+.catalogButton{
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: colors.$primary-color;
+    color: white;
+    margin-bottom: 30px;
+}

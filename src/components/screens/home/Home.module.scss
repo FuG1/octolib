@@ -1,44 +1,67 @@
+@use '../../../assets/styles/colors' as colors;
+
 .header {
+  border: 1px solid colors.$text-color;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  margin: 30px;
 }
 
-.OctoLogo {
+.logo {
   display: flex;
   align-items: center;
 }
 
-.OctoLogoText{
+.logo img{
+  margin-right: 10px;
+  width: 65px;
+  height: 65px;
+}
+
+.text{
   font-family: "Inter", sans-serif;
   font-size: 32px;
   font-weight: 500;
 }
 
-.logo {
-  margin-right: 10px;
+.navigation {
+  font-size: 22px;
+  display: flex;
+  gap: 100px;
+  margin-right: 25ch;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: colors.$text-color;
+  font-weight: 500;
 }
 
 .authButtons {
   display: flex;
-  gap: 10px;
+  gap: 40px;
+  margin-right: 10px;
 }
 
 .login {
+  font-size: 20px;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  background-color: #007bff;
+  border-radius: 10px;
+  background-color: colors.$primary-color;
   color: white;
 }
 
 .signUp {
+  font-size: 20px;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  background-color: #28a745;
+  border-radius: 10px;
+  background-color: colors.$secondary-color;
   color: white;
 }

@@ -1,9 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import styles from './Home.module.scss'
 import Welcome from './welcome-container/Welcome.tsx'
-import Popular  from "./popular-container/Popular.tsx";
+import Popular from "./popular-container/Popular.tsx"
 
 const Home: React.FC = () => {
+    const navigate = useNavigate()
+
     return (
         <>
             <div className={styles.header}>
@@ -17,14 +20,13 @@ const Home: React.FC = () => {
                     <a href="#" className={styles.contacts}>Контакты</a>
                 </div>
                 <div className={styles.authButtons}>
-                    <button className={styles.login}>Login</button>
-                    <button className={styles.signUp}>Sign up</button>
+                    <button className={styles.login} onClick={() => navigate('/login')}>Login</button>
+                    <button className={styles.signUp} onClick={() => navigate('/register')}>Sign up</button>
                 </div>
             </div>
             <Welcome />
             <Popular />
         </>
-
     )
 }
 

@@ -1,0 +1,57 @@
+@use '../../../assets/styles/colors' as colors;
+
+.aboutContainer {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section {
+  background-color: rgba(colors.$accent-color, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid colors.$text-color;
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: colors.$primary-color;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      font-size: 18px;
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+
+      &:before {
+        content: "•";
+        color: colors.$primary-color;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+}

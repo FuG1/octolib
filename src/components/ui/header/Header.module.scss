@@ -1,0 +1,80 @@
+@use '../../../assets/styles/colors' as colors;
+
+.header {
+  border: 1px solid colors.$text-color;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo img{
+  margin-right: 10px;
+  width: 65px;
+  height: 65px;
+}
+
+.text{
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.navigation {
+  font-size: 22px;
+  display: flex;
+  gap: 100px;
+  margin-right: 25ch;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: colors.$text-color;
+  font-weight: 500;
+  
+  &:hover {
+    color: colors.$primary-color;
+  }
+}
+
+.authButtons {
+  display: flex;
+  gap: 40px;
+  margin-right: 10px;
+}
+
+.login {
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: colors.$primary-color;
+  color: white;
+  
+  &:hover {
+    background-color: colors.$secondary-color;
+  }
+}
+
+.signUp {
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: colors.$secondary-color;
+  color: white;
+  
+  &:hover {
+    background-color: colors.$accent-color;
+  }
+}

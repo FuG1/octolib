@@ -6,12 +6,10 @@ import { useAuth } from '../../../../context/AuthContext'
 const Register: React.FC = () => {
   const [username, setUsername] = useState('')
   const navigate = useNavigate()
-  const { login } = useAuth()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    login(username)
-    navigate('/')
+    navigate('/login')
   }
 
   return (

@@ -5,6 +5,7 @@ import Register from './components/screens/auth/register/Register'
 import Catalog from './components/screens/catalog/Catalog'
 import About from './components/screens/about/About'
 import Contacts from './components/screens/contacts/Contacts'
+import ReadingTables from './components/screens/reading-tables/ReadingTables'
 
 function App() {
   return(
@@ -16,9 +17,8 @@ function App() {
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/about" element={<About />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/tables" element={<ReadingTables />} />
       </Routes>
     </Router>
   )
 }
-
-export default App

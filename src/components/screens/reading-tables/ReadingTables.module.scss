@@ -1,0 +1,114 @@
+@use '../../../assets/styles/colors' as colors;
+
+.tablesContainer {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.tablesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.tableCard {
+  background-color: rgba(colors.$accent-color, 0.1);
+  border: 1px solid colors.$text-color;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.tableIcon {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.tableName {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: colors.$primary-color;
+}
+
+.tableStatus {
+  font-size: 16px;
+  color: colors.$text-color;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: colors.$background-color;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: colors.$text-color;
+  font-size: 24px;
+  cursor: pointer;
+
+  &:hover {
+    color: colors.$primary-color;
+  }
+}
+
+.tableDetails {
+  h2 {
+    font-size: 28px;
+    color: colors.$primary-color;
+    margin-bottom: 20px;
+  }
+
+  .booksList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      padding: 15px;
+      border: 1px solid colors.$text-color;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      
+      &:hover {
+        background-color: rgba(colors.$accent-color, 0.1);
+      }
+    }
+  }
+}

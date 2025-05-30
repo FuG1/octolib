@@ -13,6 +13,7 @@ const Header: React.FC = () => {
             </div>
             <div className={styles.navigation}>
                 <a href="/catalog" onClick={(e) => { e.preventDefault(); navigate('/catalog') }}>Каталог</a>
+                <a href="/tables" onClick={(e) => { e.preventDefault(); navigate('/tables') }}>Читательские столы</a>
                 <a href="/about" onClick={(e) => { e.preventDefault(); navigate('/about') }}>О нас</a>
                 <a href="/contacts" onClick={(e) => { e.preventDefault(); navigate('/contacts') }}>Контакты</a>
             </div>

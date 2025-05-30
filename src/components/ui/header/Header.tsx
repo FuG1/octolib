@@ -1,9 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './Header.module.scss'
+import { useAuth } from '../../../context/AuthContext'
 
 const Header: React.FC = () => {
     const navigate = useNavigate()
+    const { username, logout, isAuthenticated } = useAuth()
 
     return (
         <div className={styles.header}>
@@ -18,8 +20,23 @@ const Header: React.FC = () => {
                 <a href="/contacts" onClick={(e) => { e.preventDefault(); navigate('/contacts') }}>Контакты</a>
             </div>
             <div className={styles.authButtons}>
-                <button className={styles.login} onClick={() => navigate('/login')}>Login</button>
-                <button className={styles.signUp} onClick={() => navigate('/register')}>Sign up</button>
+                {isAuthenticated ? (
+                    <div className={styles.userInfo}>
+                        <span>Привет, {username}!</span>
+                        <button className={styles.logout} onClick={logout}>
+                            Выйти
+                        </button>
+                    </div>
+                ) : (
+                    <>
+                        <button className={styles.login} onClick={() => navigate('/login')}>
+                            Login
+                        </button>
+                        <button className={styles.signUp} onClick={() => navigate('/register')}>
+                            Sign up
+                        </button>
+                    </>
+                )}
             </div>
         </div>
     )

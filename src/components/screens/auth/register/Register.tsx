@@ -34,6 +34,7 @@ const Register: React.FC = () => {
   return (
     <div className={styles.authContainer}>
       <div className={styles.formContainer}>
+        <Link to="/" className={styles.homeButton}>← На главную</Link>
         <h1 className={styles.title}>Регистрация</h1>
         <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.inputGroup}>

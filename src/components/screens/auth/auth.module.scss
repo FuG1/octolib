@@ -16,6 +16,26 @@
   padding: 40px;
   width: 100%;
   max-width: 400px;
+  position: relative;
+}
+
+.homeButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  color: colors.$text-color;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  
+  &:hover {
+    color: colors.$primary-color;
+  }
 }
 
 .title {
@@ -47,13 +67,17 @@
   padding: 12px;
   border-radius: 10px;
   border: 1px solid colors.$text-color;
-  background-color: transparent;
+  background-color: rgba(colors.$text-color, 0.1);
   color: colors.$text-color;
   font-size: 16px;
 
   &:focus {
     outline: none;
     border-color: colors.$primary-color;
+  }
+
+  &::placeholder {
+    color: rgba(colors.$text-color, 0.5);
   }
 }
 

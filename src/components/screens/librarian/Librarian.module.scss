@@ -1,0 +1,118 @@
+@use '../../../assets/styles/colors' as colors;
+
+.librarianContainer {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.tablesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.tableCard {
+  background-color: rgba(colors.$accent-color, 0.1);
+  border: 1px solid colors.$text-color;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.tableName {
+  font-size: 24px;
+  font-weight: 500;
+  color: colors.$primary-color;
+}
+
+.tableStatus {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  
+  &.free {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  &.occupied {
+    background-color: colors.$primary-color;
+    color: white;
+  }
+}
+
+.assignForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  label {
+    font-size: 16px;
+    color: colors.$text-color;
+  }
+
+  input, select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid colors.$text-color;
+    background-color: transparent;
+    color: colors.$text-color;
+    font-size: 16px;
+
+    &:focus {
+      outline: none;
+      border-color: colors.$primary-color;
+    }
+  }
+}
+
+.assignButton {
+  background-color: colors.$primary-color;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: colors.$secondary-color;
+  }
+
+  &:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+  }
+}
+
+.currentVisitor {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: rgba(colors.$accent-color, 0.2);
+  border-radius: 5px;
+
+  p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+}

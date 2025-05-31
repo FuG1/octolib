@@ -5,7 +5,7 @@ import { useAuth } from '../../../context/AuthContext'
 
 const Header: React.FC = () => {
     const navigate = useNavigate()
-    const { username, logout, isAuthenticated } = useAuth()
+    const { username, role, logout, isAuthenticated } = useAuth()
 
     return (
         <div className={styles.header}>
@@ -18,6 +18,12 @@ const Header: React.FC = () => {
                 <a href="/tables" onClick={(e) => { e.preventDefault(); navigate('/tables') }}>Читательские столы</a>
                 <a href="/about" onClick={(e) => { e.preventDefault(); navigate('/about') }}>О нас</a>
                 <a href="/contacts" onClick={(e) => { e.preventDefault(); navigate('/contacts') }}>Контакты</a>
+                {role === 'admin' && (
+                    <a href="/admin" onClick={(e) => { e.preventDefault(); navigate('/admin') }}>Админ панель</a>
+                )}
+                {role === 'librarian' && (
+                    <a href="/librarian" onClick={(e) => { e.preventDefault(); navigate('/librarian') }}>Панель библиотекаря</a>
+                )}
             </div>
             <div className={styles.authButtons}>
                 {isAuthenticated ? (

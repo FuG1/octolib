@@ -5,12 +5,13 @@ import { useAuth } from '../../../../context/AuthContext'
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState('')
+  const [role, setRole] = useState<'user' | 'admin' | 'librarian'>('user')
   const navigate = useNavigate()
   const { login } = useAuth()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    login(username)
+    login(username, role)
     navigate('/')
   }
 
@@ -38,6 +39,19 @@ const Login: React.FC = () => {
               id="password"
               required
             />
+          </div>
+          <div className={styles.inputGroup}>
+            <label className={styles.label} htmlFor="role">Роль</label>
+            <select
+              className={styles.input}
+              id="role"
+              value={role}
+              onChange={(e) => setRole(e.target.value as 'user' | 'admin' | 'librarian')}
+            >
+              <option value="user">Пользователь</option>
+              <option value="admin">Администратор</option>
+              <option value="librarian">Библиотекарь</option>
+            </select>
           </div>
           <button type="submit" className={styles.submitButton}>
             Войти

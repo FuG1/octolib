@@ -6,6 +6,8 @@ import Catalog from './components/screens/catalog/Catalog'
 import About from './components/screens/about/About'
 import Contacts from './components/screens/contacts/Contacts'
 import ReadingTables from './components/screens/reading-tables/ReadingTables'
+import Admin from './components/screens/admin/Admin'
+import Librarian from './components/screens/librarian/Librarian'
 import { AuthProvider } from './context/AuthContext'
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/tables" element={<ReadingTables />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/librarian" element={<Librarian />} />
         </Routes>
       </Router>
     </AuthProvider>

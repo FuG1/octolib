@@ -1,0 +1,141 @@
+@use '../../../assets/styles/colors' as colors;
+
+.adminContainer {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.tab {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 1px solid colors.$text-color;
+  color: colors.$text-color;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: colors.$primary-color;
+    border-color: colors.$primary-color;
+  }
+
+  &.active {
+    background-color: colors.$primary-color;
+    border-color: colors.$primary-color;
+  }
+}
+
+.section {
+  background-color: rgba(colors.$accent-color, 0.1);
+  border: 1px solid colors.$text-color;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  label {
+    font-size: 16px;
+    color: colors.$text-color;
+  }
+
+  input, textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid colors.$text-color;
+    background-color: transparent;
+    color: colors.$text-color;
+    font-size: 16px;
+
+    &:focus {
+      outline: none;
+      border-color: colors.$primary-color;
+    }
+  }
+}
+
+.button {
+  background-color: colors.$primary-color;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: colors.$secondary-color;
+  }
+}
+
+.list {
+  display: grid;
+  gap: 20px;
+}
+
+.item {
+  background-color: rgba(colors.$accent-color, 0.2);
+  border: 1px solid colors.$text-color;
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemActions {
+  display: flex;
+  gap: 10px;
+}
+
+.editButton {
+  background-color: colors.$secondary-color;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(colors.$secondary-color, 10%);
+  }
+}
+
+.deleteButton {
+  background-color: colors.$accent-color;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(colors.$accent-color, 10%);
+  }
+}
